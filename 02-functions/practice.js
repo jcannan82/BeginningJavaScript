@@ -1,7 +1,10 @@
 // (example) Write a function that accepts two number arguments and adds them
 // together.
-var add = function () {
+let add = function (firstNumber, secondNumber) {
+    let answer = firstNumber + secondNumber;
+    return answer;
 };
+console.log(add(3,5));
 
 
 // Create a function that takes in a cost and a quantity and outputs the total
@@ -9,7 +12,9 @@ var add = function () {
 //
 //     var preTaxTotal = totalCost(5, 5.99); // 5 items at 5.99
 //     //=> 29.950000000000003
-var totalCost = function () {
+let totalCost = function (cost, quantity) {
+    let answer = cost * quantity;
+    return answer;
 };
 
 
@@ -21,7 +26,9 @@ var totalCost = function () {
 //
 //     cardString("queen", "hearts");
 //     //=> queen of hearts
-var cardString = function () {
+let cardString = function (suit, card) {
+    let answer = suit + " of " + card;
+    return answer;
 };
 
 
@@ -33,7 +40,8 @@ var cardString = function () {
 //
 //     openTag("div");
 //     //=> <div>
-var openTag = function () {
+let openTag = function (tag) {
+    return "<" + tag + ">";
 };
 
 
@@ -45,7 +53,8 @@ var openTag = function () {
 //
 //     closeTag("div");
 //     //=> </div>
-var closeTag = function () {
+let closeTag = function (tag) {
+    return "</" + tag + ">"
 };
 
 
@@ -62,7 +71,8 @@ var closeTag = function () {
 //
 // Although I won't be testing for this, your code should re-use the functions that
 // you created in the previous section.
-var toTagString = function () {
+let toTagString = function (tag, content) {
+    return "<" + tag + ">" + content + "</" + tag + ">"
 };
 
 

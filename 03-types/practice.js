@@ -1,6 +1,12 @@
 // Write a function called isDivisibleBy3 which returns `true` if a number is
 // divisible by 3, and `false` otherwise.
-var isDivisibleBy3 = function () {
+let isDivisibleBy3 = function (numberToCheck) {
+    let modulusAnswer = numberToCheck % 3;
+    if (modulusAnswer == 0) {
+        return true;
+    } else {
+        return false;
+    }
 };
 
 
