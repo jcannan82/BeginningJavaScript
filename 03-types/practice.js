@@ -37,14 +37,15 @@ let fahrToCels = function (temperature) {
 //
 //     randUpTo(1000);
 //     //=> 236
-var randUpTo = function () {
-    Math.random()
+let randUpTo = function (maxNumber) {
+    return Math.floor(Math.random() * maxNumber);
 };
 
 
 // Write a function called `randBetween` that accepts two numbers representing a
 // range and returns a random whole number between those two numbers.
-var randBetween = function () {
+let randBetween = function (min, max) {
+    return Math.floor(Math.random * (max - min) + min);
 };
 
 
