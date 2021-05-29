@@ -45,7 +45,7 @@ let randUpTo = function (maxNumber) {
 // Write a function called `randBetween` that accepts two numbers representing a
 // range and returns a random whole number between those two numbers.
 let randBetween = function (min, max) {
-    return Math.floor(Math.random * (max - min) + min);
+    return Math.floor(Math.random() * (max - min) + min);
 };
 
 
@@ -64,7 +64,8 @@ let randBetween = function (min, max) {
 //
 //     isSuit("coins");
 //     //=> false
-var isSuit = function () {
+let isSuit = function (rawSuit) {
+    return "Hearts Clubs Diamonds Spades".toLowerCase().indexOf(rawSuit.toLowerCase()) >= 0;
 };
 
 
@@ -80,14 +81,16 @@ var isSuit = function () {
 //
 //     isRank("one");
 //     //=> false
-var isRank = function () {
+let isRank = function (rawRank) {
+    return "two three four five six seven eight nine ten jack queen king ace".toLowerCase().indexOf(rawRank.toLowerCase()) >= 0;
 };
 
 
 // Using the previous two functions, write a function called isCard that accepts
 // two arguments, a rank and a suit, and returns true if they are valid for a card,
 // and false otherwise.
-var isCard = function () {
+let isCard = function (rank, suit) {
+    return isRank(rank) && isSuit(suit);
 };
 
 
@@ -96,7 +99,8 @@ var isCard = function () {
 // Remember that you can use strings in comparisons in the same way that you can
 // use numbers, and the ordering is alphabetical (with capital letters having lower
 // values than their lower-case counterparts).
-var isCapitalized = function () {
+let isCapitalized = function (wordToEvaluate) {
+    return wordToEvaluate < wordToEvaluate.toLowerCase();
 };
 
 
@@ -109,7 +113,8 @@ var isCapitalized = function () {
 //
 //     getHTMLText("<li>this is a list item</li>");
 //     //=> this is a list item
-var getHTMLText = function () {
+let getHTMLText = function (textToProcess) {
+    return textToProcess.slice(textToProcess.indexOf(">") + 1,textToProcess.indexOf("</"));
 };
 
 
@@ -130,5 +135,6 @@ var getHTMLText = function () {
 //
 // It may help in this case to look up the `lastIndexOf` method on the string
 // objects.
-var isHTMLElement = function () {
+let isHTMLElement = function (stringToProcess) {
+    return stringToProcess.length -1 == stringToProcess.lastIndexOf(">");
 };
