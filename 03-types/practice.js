@@ -2,7 +2,7 @@
 // divisible by 3, and `false` otherwise.
 let isDivisibleBy3 = function (numberToCheck) {
     let modulusAnswer = numberToCheck % 3;
-    return modulusAnswer == 0;
+    return modulusAnswer === 0;
 };
 
 
@@ -13,13 +13,11 @@ let isDivisibleBy3 = function (numberToCheck) {
 // 5. Finally, you divide by 9. The division operator in JavaScript is
 // `/`.
 let celsToFahr = function (temperature) {
-    let convertedTemp = temperature * 9 / 5 + 32;
-    return convertedTemp;
+    return temperature * 9 / 5 + 32;
 };
 
 let fahrToCels = function (temperature) {
-    let convertedTemp = (temperature - 32) * 5 / 9;
-    return convertedTemp;
+    return (temperature - 32) * 5 / 9;
 };
 
 
@@ -136,5 +134,10 @@ let getHTMLText = function (textToProcess) {
 // It may help in this case to look up the `lastIndexOf` method on the string
 // objects.
 let isHTMLElement = function (stringToProcess) {
-    return stringToProcess.length -1 == stringToProcess.lastIndexOf(">");
+    let HTMLTag = stringToProcess.slice(1,stringToProcess.indexOf(">")+1);
+    console.log(stringToProcess);
+    console.log("tag found is " + HTMLTag);
+    let outcome = stringToProcess.lastIndexOf("</" + HTMLTag);
+    console.log("final outcome is " + outcome);
+    return outcome > 1;
 };
