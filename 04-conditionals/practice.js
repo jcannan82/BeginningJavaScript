@@ -47,7 +47,26 @@ let passwordStrength = function (passwordToTest) {
 //
 //      isLeapYear("hello");
 //      //=> THAT'S NOT A NUMBER!
-var isLeapYear = function () {
+let isLeapYear = function (yearToTest) {
+    if(Number.isInteger(yearToTest))
+    {
+        if(yearToTest % 4 === 0) {
+            if (yearToTest % 100 === 0) {
+                if (yearToTest % 400 === 0) {
+                    return true
+                } else {
+                    return false
+                }
+            } else
+            {
+                return true
+            }
+        }
+    } else
+    {
+        throw "THAT'S NOT A NUMBER!"
+    }
+    return false
 };
 
 
