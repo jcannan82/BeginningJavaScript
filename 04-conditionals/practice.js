@@ -86,7 +86,29 @@ let isLeapYear = function (yearToTest) {
 //
 //      firstInDictionary("whale", 5, 10);
 //      //=> ALL THREE ARGS MUST BE STRINGS!
-var firstInDictionary = function () {
+let firstInDictionary = function (strOne, strTwo, strThree) {
+    if(!(typeof strOne === "string")) {throw "ALL THREE ARGS MUST BE STRINGS!"}
+    if(!(typeof strTwo === "string")) {throw "ALL THREE ARGS MUST BE STRINGS!"}
+    if(!(typeof strThree === "string")) {throw "ALL THREE ARGS MUST BE STRINGS!"}
+
+    if(strOne.charAt(0) < strTwo.charAt(0))
+    {
+        if(strOne.charAt(0) < strThree.charAt(0))
+        {
+            return strOne
+        } else {
+            return strThree
+        }
+    }
+    else {
+        if (strTwo.charAt(0) < strThree.charAt(0)) {
+            return strTwo
+        } else
+        {
+            return strThree
+        }
+
+    }
 };
 
 
