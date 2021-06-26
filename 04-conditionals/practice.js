@@ -122,20 +122,20 @@ let firstInDictionary = function (strOne, strTwo, strThree) {
 //
 //     getTagName("<p>this is wrong</div>");
 //     //=> Error: Not an HTML Element!
-var getTagName = function () {
+let getTagName = function () {
 };
 
 
 // Re-implement our improveTweet function so it can generate any of lol, omg,
 // lmao, and rofl.
-var improveTweet = function () {
+let improveTweet = function () {
 };
 
 
 // Write a function called `isQuestion` that returns true if the input is a
 // string and it ends in a question mark. We'll use this function in the next
 // practice problem.
-var isQuestion = function () {
+let isQuestion = function () {
 };
 
 
@@ -162,7 +162,7 @@ var isQuestion = function () {
 //
 //     magic8Ball("Is this a question?");
 //     //=> Signs point to yes
-var magic8Ball = function () {
+let magic8Ball = function () {
 };
 
 
@@ -202,7 +202,7 @@ var magic8Ball = function () {
 //     var strWithInterjection = beginning + "-lol-" + end;
 //
 // You just have to generalize this to an arbitrary index and wrap it in a function.
-var interjectAt = function () {
+let interjectAt = function () {
 };
 
 
@@ -210,7 +210,7 @@ var interjectAt = function () {
 // `randomInterjection` function consists of generating a random message and a
 // random location within the string, and then calling into the `interjectAt`
 // function with the appropriate arguments.
-var randomInterject = function () {
+let randomInterject = function () {
 };
 
 
