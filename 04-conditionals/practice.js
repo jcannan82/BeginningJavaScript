@@ -122,7 +122,10 @@ let firstInDictionary = function (strOne, strTwo, strThree) {
 //
 //     getTagName("<p>this is wrong</div>");
 //     //=> Error: Not an HTML Element!
-let getTagName = function () {
+let getTagName = function (stringElement) {
+    let HTMLTag = stringElement.slice(1,stringElement.indexOf(">")+1);
+    let outcome = stringElement.lastIndexOf("</" + HTMLTag);
+    return outcome > 1;
 };
 
 
