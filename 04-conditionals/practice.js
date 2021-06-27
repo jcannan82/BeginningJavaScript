@@ -123,9 +123,25 @@ let firstInDictionary = function (strOne, strTwo, strThree) {
 //     getTagName("<p>this is wrong</div>");
 //     //=> Error: Not an HTML Element!
 let getTagName = function (stringElement) {
-    let HTMLTag = stringElement.slice(1,stringElement.indexOf(">")+1);
-    let outcome = stringElement.lastIndexOf("</" + HTMLTag);
-    return outcome > 1;
+    // Assume there are tags in the string
+    // obtain the opening tag (the thing in between the < >)
+    let openingTagStart = stringElement.indexOf("<")
+    let openingTagEnd = stringElement.indexOf(">")
+    let cookedOpeningTag = stringElement.substring(openingTagStart+1, openingTagEnd)
+    // obtain the closing tag property (the thing in between the < and />)
+    let closingTagStart = stringElement.lastIndexOf("</")
+    let closingTagEnd = stringElement.lastIndexOf(">")
+    let cookedClosingTag = stringElement.substring(closingTagStart+2, closingTagEnd)
+    // compare the tags
+    if (cookedOpeningTag === cookedClosingTag)
+    {
+        // tags match, return tag used
+        return cookedOpeningTag
+    } else
+    {
+        // tags do not match, throw and error
+        throw "Error: Not an HTML Element!"
+    }
 };
 
 
