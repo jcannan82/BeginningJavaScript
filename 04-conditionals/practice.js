@@ -147,14 +147,31 @@ let getTagName = function (stringElement) {
 
 // Re-implement our improveTweet function so it can generate any of lol, omg,
 // lmao, and rofl.
-let improveTweet = function () {
+let improveTweet = function (tweet) {
+    // generate either a 1 or a 0
+    var random = Math.floor(Math.random() * 2);
+    var result = tweet;
+    var expression;
+
+    if (random === 0) {
+        expression = "lol";
+    } else {
+        expression = "omg";
+    }
+
+    if (result.indexOf(expression) === -1 && result.indexOf(expression.toUpperCase()) === -1) {
+        result = result + " " + expression;
+    }
+
+    return result;
 };
 
 
 // Write a function called `isQuestion` that returns true if the input is a
 // string and it ends in a question mark. We'll use this function in the next
 // practice problem.
-let isQuestion = function () {
+let isQuestion = function (stringToEvaluate) {
+    return stringToEvaluate.charAt(stringToEvaluate.length-1) === "?"
 };
 
 
